@@ -1,22 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import{getMovieList, searchMovie} from "./API/api"
+import { useEffect } from 'react';
 
-function App() {
+const App = () => {
+
+  useEffect(() => {
+    getMovieList()
+  }, [])
+  const search = (q) =>{
+    console.log({q})
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       <nav>Test</nav>
+       <div>
+        <div className='movie-container'></div>
+        <input  
+         placeholder='What do u wanna watch today?'
+         className='movie-search'
+         onChange={({target}) => search(target.value)}> </input>
+         <div className='movie-container'></div>
+       </div>
       </header>
     </div>
   );
