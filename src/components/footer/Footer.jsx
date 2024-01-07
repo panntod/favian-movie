@@ -22,7 +22,7 @@ const Footer = () => {
           <li className="menuItem">FAQ</li>
         </ul>
         <div className="infoText">
-          Made By Vaibhav More (Full stack Developer).
+          Made By Vaibhav More and <a href="pandhu-munjalindra.xy" style={{ color: "white", textDecoration: "none" }} >Pandhu Arya</a> (Full stack Developer).
         </div>
         <div className="socialIcons">
           <span className="icon">
